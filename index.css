@@ -1,0 +1,231 @@
+:root {
+  --dark-background-color: black;
+  --light-background-color: white;
+
+  --text-dark-color: white;
+  --text-light-color: black;
+  --pad: max(20px, 4vmin);
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  src: url("/fonts/PPNeueMontreal-Thin.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 400;
+  src: url("/fonts/PPNeueMontreal-Book.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 600;
+  src: url("/fonts/PPNeueMontreal-SemiBold.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: "Neue Montreal Mono";
+  font-weight: 200;
+  src: url("/fonts/PPNeueMontrealMono-Thin.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: "Neue Montreal Mono";
+  font-weight: 400;
+  src: url("/fonts/PPNeueMontrealMono-Book.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: "Neue Montreal Mono";
+  font-weight: 600;
+  src: url("/fonts/PPNeueMontrealMono-SemiBold.woff2") format("woff2")
+}
+
+body {
+  background-color: var(--dark-background-color);
+  overflow: hidden;
+  font-feature-settings: "palt";
+  color: var(--text-dark-color);
+}
+
+#container {
+  margin: 1%;
+  height: 95vh;
+  position: relative;
+  border: 1px solid var(--text-dark-color);
+  outline: 999px solid var(--text-light-color);
+}
+
+.active_content {
+  display: block;
+}
+
+.nonactive_content {
+  display: none;
+}
+
+canvas {
+  z-index: -1;
+}
+
+#container canvas,
+#overlay {
+  position: absolute;
+}
+
+#overlay {
+  color: var(--text-dark-color);
+}
+
+.siteHeader_title {
+  font-family: "Neue Montreal";
+  margin: 0.1em 0 0 0.4em;
+  font-size: 30px;
+}
+
+.siteHeader_lower_title {
+  font-family: "Neue Montreal";
+  margin: 0.1em 0 0 0.7em;
+  font-size: 20px;
+}
+
+nav {
+  margin-top: 50px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+  font-family: "Neue Montreal";
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-dark-color);
+  margin-bottom: 10px;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.is-selected ._dot {
+  display: block;
+}
+
+.is-selected ._text {
+  display: none;
+}
+
+._dot {
+  display: none;
+}
+
+._text:hover {
+  opacity: .72;
+}
+
+.siteHeader_nav {
+  margin-top: 50px;
+}
+
+.home {
+  position: absolute;
+  right: calc(var(--pad)* 2);
+  bottom: calc(var(--pad)* 1);
+  white-space: nowrap;
+  /* display: block; */
+}
+
+.home_aboutme {
+  display: block;
+  line-height: 1.5;
+}
+
+.project_section {
+  margin-top: 10%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 70vh;
+}
+
+.project_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 400;
+  padding-right: 2em;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+.project_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 15px;
+  margin-top: 50px;
+  padding-right: 2em;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.project_title {
+  font-size: 60px;
+  font-weight: 200;
+  text-align: right;
+}
+
+.project_info {
+  margin-left: 1em;
+  text-align: right;
+}
+
+.info_page {
+    position: absolute;
+    right: calc(var(--pad)* 2);
+    bottom: calc(var(--pad)* 2);
+    white-space: nowrap;
+}
+
+.info_content{
+  line-height: 1.5;
+}
+
+.text-btn {
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+}
+
+.contact_page {
+    position: absolute;
+    right: calc(var(--pad)* 2);
+    bottom: calc(var(--pad)* 3);
+    white-space: nowrap;
+}
+
+.email{
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: center;
+}

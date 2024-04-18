@@ -1,0 +1,4 @@
+- [ ] Move the active element detection to javascript 
+- [ ] migrate to webgl shaders to render on canvas
+-
+- https://jsfiddle.net/qSJa8/
