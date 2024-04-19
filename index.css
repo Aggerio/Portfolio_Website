@@ -189,7 +189,7 @@ div::-webkit-scrollbar {
 }
 
 .project_title {
-  font-size: 60px;
+  font-size: 2em;
   font-weight: 200;
   text-align: right;
 }
